@@ -1,0 +1,53 @@
+<nav class="navbar" style="background-color: #f0e8ef;">
+  <div class="navbar-container">
+    <h1><a routerLink="/" >E-Shopping</a></h1>
+
+     
+
+    <!-- Search Box -->
+    <div *ngIf="menuType !== 'seller'" class="nav-search">
+      <input
+        type="text"
+        #searchInput
+        (keyup)="searchProduct($event)"
+        (blur)="hideSearch()"
+        placeholder="Search Products"
+      />
+      <button (click)="submitSearch(searchInput.value)">Search</button>
+
+      <ul class="suggested-search" *ngIf="searchResult?.length">
+        <li *ngFor="let item of searchResult">
+          <a (mousedown)="redirectToDetails(item.id)">{{ item.name }}</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Navigation Links -->
+    <ul class="nav-links" [ngSwitch]="menuType">
+      <!-- Default -->
+      <ng-container *ngSwitchCase="'default'">
+        <li><a routerLink="/seller-auth">Seller</a></li>
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/user-auth">Login/Sign-up</a></li>
+        <li><a routerLink="/cart-page">Cart({{ cartItems }})</a></li>
+      </ng-container>
+
+      <!-- User -->
+      <ng-container *ngSwitchCase="'user'">
+        <li><a>{{ userName | titlecase }}</a></li>
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/my-orders">My Orders</a></li>
+        <li><a (click)="userLogout()">Logout</a></li>
+        <li><a routerLink="/cart-page">Cart({{ cartItems }})</a></li>
+      </ng-container>
+
+      <!-- Seller -->
+      <ng-container *ngSwitchCase="'seller'">
+        <li><a routerLink="/seller-add-product">Add Product</a></li>
+        <li><a routerLink="/seller-home">List</a></li>
+        <li><a (click)="logout()">Logout</a></li>
+        <li><a>{{ sellerName | titlecase }}</a></li>
+      </ng-container>
+    </ul>
+  </div>
+</nav>
