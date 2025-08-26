@@ -41,23 +41,38 @@
       "password": "abc@123",
       "email": "bhasker@test.com",
       "id": "8"
+    },
+    {
+      "id": "365d",
+      "name": "hamsa",
+      "password": "hamsa",
+      "email": "hamsagmail.com"
     }
   ],
   "products": [
     {
-      "name": "Samsung m 40 a ",
+      "name": "Samsung A55 5G ",
       "price": "550",
       "category": "mobile",
-      "color": "white",
-      "description": "this is a Samsung product",
-      "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSOO1JDPUNwcPiqzHYhaL_zpJA0Ymlr6mD9sSgTPad_JYdrk-o",
+      "colors": [
+        "pink",
+        "blue",
+        "white",
+        "Green"
+      ],
+      "description": "Samsung Galaxy A55 5G (Awesome Navy, 8GB RAM, 256GB Storage) | AI | Metal Frame | 50 MP Main Camera (OIS) | Super HDR Video| Nightography | IP67 | Corning Gorilla Glass Victus+ | sAMOLED Display",
+      "image": "assets/samsung-A55-5G.jpg",
       "id": "1"
     },
     {
-      "name": "I phone 14",
+      "name": "I phone 15",
       "price": "100000",
       "category": "mobile",
-      "color": "black",
+      "colors": [
+        "pink",
+        "lavender",
+        "white"
+      ],
       "description": "An Apple Product",
       "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSOO1JDPUNwcPiqzHYhaL_zpJA0Ymlr6mD9sSgTPad_JYdrk-o",
       "id": "2"
@@ -66,7 +81,10 @@
       "name": "HP Laptop",
       "price": "50000",
       "category": "Laptop",
-      "color": "black",
+      "colors": [
+        "Black",
+        "white"
+      ],
       "description": "Hp laptop for student and professionals",
       "image": "https://www.91-cdn.com/hub/wp-content/uploads/2022/07/Top-laptop-brands-in-India.jpg",
       "id": "3"
@@ -75,7 +93,7 @@
       "name": "Nike Shoes",
       "price": "3000",
       "category": "Shoes",
-      "color": "Black",
+      "colors": "Black",
       "description": "Best shoes for Running",
       "image": "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/1eeaacc0-e07c-4024-a5f7-57f2fd23e8a2/air-max-270-g-golf-shoe-Z6vCfs.png",
       "id": "4"
@@ -84,7 +102,10 @@
       "name": "Levies Jeans",
       "price": "5000",
       "category": "Jeans",
-      "color": "blue",
+      "colors": [
+        "grey",
+        "black"
+      ],
       "description": "Confirmable jeans for man ",
       "image": "https://www.filmibeat.com/wimg/desktop/2012/12/13548612746596.jpg",
       "id": "5"
@@ -93,7 +114,7 @@
       "name": "Truck",
       "price": "Toy",
       "category": "Toys",
-      "color": "Red",
+      "colors": "Red",
       "description": "A toy for 5 year old child",
       "image": "https://cdn.shopify.com/s/files/1/0011/8367/8476/products/Truck2_1400x.png?v=1662789388",
       "id": "6"
@@ -102,7 +123,7 @@
       "name": "Noise Smart Watch",
       "price": "2000",
       "category": "Watch",
-      "color": "Black",
+      "colors": "Black",
       "description": "Noise smart watch for man and women both",
       "image": "https://www.reliancedigital.in/medias/Noise-Colorfit-Pro-2-Smart-Watch-491900986-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w1MDc0NXxpbWFnZS9qcGVnfGltYWdlcy9oYzkvaDdjLzk1OTE4MjA3NDY3ODIuanBnfDA3MjZlMzkzOTExYzMyNzk5Y2YzOTk0MWFkMjc5YjE5OTlkMDE4NzYzYTg1YzQ2YmNjZjMxYzc5ZDJiYjBlNDg",
       "id": "7"
@@ -138,6 +159,12 @@
       "name": "gayatrhi",
       "email": "gayathri@gmail.com",
       "password": "gayathri"
+    },
+    {
+      "id": "69f3",
+      "name": "hamsa",
+      "email": "hamsa@gmail.com",
+      "password": "hamsa"
     }
   ],
   "cart": [
@@ -164,6 +191,18 @@
       "productId": 5,
       "userId": 3,
       "id": "8"
+    },
+    {
+      "id": "3c5b",
+      "name": "HP Laptop",
+      "price": "50000",
+      "category": "Laptop",
+      "colors": "white",
+      "description": "Hp laptop for student and professionals",
+      "image": "https://www.91-cdn.com/hub/wp-content/uploads/2022/07/Top-laptop-brands-in-India.jpg",
+      "quantity": 1,
+      "productId": "3",
+      "userId": "cee5"
     }
   ],
   "orders": [
@@ -184,19 +223,11 @@
       "id": "3"
     },
     {
-      "id": "7a0d",
-      "email": "gayathri@gmail.com",
+      "id": "3789",
+      "email": "gayathir@gmail.com",
       "address": "gayatrhi",
       "contact": "hello",
-      "totalPrice": 100650,
-      "userId": "cee5"
-    },
-    {
-      "id": "464a",
-      "email": "gayathri@gmail.com",
-      "address": "gayatrhi",
-      "contact": "hello",
-      "totalPrice": 650,
+      "totalPrice": 3100,
       "userId": "cee5"
     }
   ]

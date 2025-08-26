@@ -12,35 +12,31 @@ import { SellerAuthComponent } from './seller-auth/seller-auth.component';
 import { SellerHomeComponent } from './seller-home/seller-home.component';
 import { SellerUpdateProductComponent } from './seller-update-product/seller-update-product.component';
 import { UserAuthComponent } from './user-auth/user-auth.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 const routes: Routes = [
   {
-    component: HomeComponent,
-    path: '',
+    path: '', component: HomeComponent, //default route
   },
   {
-    component: SellerAuthComponent,
-    path: 'seller-auth',
+    path: 'seller-auth', component: SellerAuthComponent, //static route
   },
   {
-    component:SellerHomeComponent,
-    path:'seller-home',
-    canActivate:[AuthGuard]
-  },{
-    component:SellerAddProductComponent,
-    path:'seller-add-product',
-    canActivate:[AuthGuard]
-  },{
-    component:SellerUpdateProductComponent,
-    path:'seller-update-product/:id',
-    canActivate:[AuthGuard]
+    path:'seller-home', component:SellerHomeComponent, canActivate:[AuthGuard] //guarded route
+ }, 
+ {
+    path:'seller-add-product', component:SellerAddProductComponent, canActivate:[AuthGuard]
   },
   {
-    component: SearchComponent,
-    path:'search/:query'
+    path:'seller-update-product/:id', component:SellerUpdateProductComponent, canActivate:[AuthGuard]
+  },
+  {
+    path:'search/:query', component: SearchComponent,
+    
   },{
     component:ProductDetailsComponent,
-    path:'details/:productId'
+    path:'details/:productId' // dynamic route
   },{
     component:UserAuthComponent,
     path:'user-auth'
@@ -53,11 +49,13 @@ const routes: Routes = [
   },{
     component:MyOrdersComponent,
     path:'my-orders'
-  }
+  },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes),
+     ReactiveFormsModule
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

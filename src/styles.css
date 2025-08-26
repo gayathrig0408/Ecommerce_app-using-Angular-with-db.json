@@ -53,3 +53,17 @@ button:disabled{
 .max-width{
   width: 100%;
 }
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.main-container {
+    min-height: 100vh; /* full screen height */
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex-grow: 1; /* expands to push footer down */
+}

@@ -1,6 +1,7 @@
 .product-details{
     margin-top: 50px;
     margin-bottom: 80px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
 .product-details .product-img{
     width: 100%;
@@ -22,4 +23,22 @@
 .quantity-group input{
     padding: 10px;
     width: 50px;
+}
+.color-options {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.color-box {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.color-box.selected {
+  border: 3px solid #000;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
